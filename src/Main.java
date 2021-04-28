@@ -1,4 +1,6 @@
 
+    import MyArraySizeException.MyArraySizeException;
+
     import java.util.Arrays;
 
     public class Main {
@@ -32,4 +34,29 @@
             return sum;
         }
 
+    }
+
+        public static void main(String[] args) {
+
+        /* 3. В методе main() вызвать полученный метод, обработать возможные
+        исключения MySizeArrayException и MyArrayDataException,
+        и вывести результат расчета.  */
+            String[][] t1 = {{"0", "1", "2", "3"}, {"0", "1", "2", "3"}, {"0", "1", "2", "3"}, {"0", "1", "2", "3"}};
+
+            int sumFin = 0;
+            try{
+                try {
+                    sumFin =  sumAllStrings(t1);
+                } catch (MyArraySizeException e){
+                    System.out.println(e.toString());
+                }
+            } catch (MyArrayDataException e1){
+                System.out.println(e1.toString());
+            }
+
+            System.out.println("Сумма элементов равна " + sumFin);
+        }
+
+        private static class MyArrayDataException extends Exception {
+        }
     }
