@@ -12,8 +12,6 @@
          * в ячейке лежит символ или текст вместо числа), должно быть брошено исключение MyArrayDataException,
          * с детализацией в какой именно ячейке лежат неверные данные.
          *
-         * @param arr Строковый массив 4x4
-         * @return boolean
          */
         private static int sumAllStrings(String[][] arr) throws MyArraySizeException, MyArrayDataException {
 
