@@ -1,4 +1,6 @@
 
+    import MyArraySizeException.MyArraySizeException;
+
     import java.util.Arrays;
 
     public class Main {
@@ -53,5 +55,8 @@
             }
 
             System.out.println("Сумма элементов равна " + sumFin);
+        }
+
+        private static class MyArrayDataException extends Exception {
         }
     }
